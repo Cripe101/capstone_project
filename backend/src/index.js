@@ -3,9 +3,9 @@ import cors from "cors";
 import "dotenv/config";
 import http from "http";
 
-import adminRoutes from "./routes/adminRoute.js";
-import authRoutes from "./routes/authRoute.js";
-import eventRoutes from "./routes/eventRoute.js";
+import adminRoutes from "./routes/admin.route.js";
+import authRoutes from "./routes/auth.route.js";
+import eventRoutes from "./routes/event.route.js";
 import connectDB from "./config/db.js";
 import connectCloudinary from "./config/cloudinary.js";
 
@@ -34,12 +34,14 @@ const server = http.createServer(app);
 
 // error handler
 app.use((err, req, res, next) => {
-  res.status(500).json({
-    message:
-      process.env.NODE_ENV === "production"
-        ? "Internal server error"
-        : err.message,
-  });
+  res
+    .status(500)
+    .json({
+      message:
+        process.env.NODE_ENV === "production"
+          ? "Internal server error"
+          : err.message,
+    });
 });
 
 // start server
