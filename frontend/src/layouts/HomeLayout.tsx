@@ -9,7 +9,7 @@ const HomeLayout = () => {
         <div>
           <Navbar />
         </div>
-        <div className="h-full">
+        <div className="h-full pt-18">
           <Outlet />
         </div>
       </div>
