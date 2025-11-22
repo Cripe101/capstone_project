@@ -1,0 +1,11 @@
+const Copyright = () => {
+  const year = new Date().getFullYear();
+  return (
+    <div className="flex  justify-between bg-blue-900 text-white font-serif px-5 py-5">
+      <p>Copyrights @ ACLC College of Ormoc, INC.</p>
+      <p className="font-sans">@ {year}</p>
+    </div>
+  );
+};
+
+export default Copyright;
