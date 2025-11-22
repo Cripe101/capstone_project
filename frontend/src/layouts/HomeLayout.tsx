@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Copyright from "../components/Copyright";
+import About from "../components/About";
 
 const HomeLayout = () => {
   return (
@@ -14,6 +15,7 @@ const HomeLayout = () => {
         </div>
       </div>
       <div className="">
+        <About />
         <Copyright />
       </div>
     </div>
